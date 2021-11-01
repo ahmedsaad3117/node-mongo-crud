@@ -1,0 +1,36 @@
+<%- include("../Partials/header") -%>
+<div class="container-fluid bg-dark">
+    <div class="container">
+        <table class="table table-dark m-0">
+            <thead >
+                <tr>
+                    <td>_id</td>
+                    <td>UserName</td>
+                    <td>Age</td>
+                    <td>edit</td>
+                    <td>delete</td>
+                </tr>
+            </thead>
+            <tbody>
+              <% speakers.forEach((speaker)=>{ %>
+
+             
+                 <tr>
+                    <td><%= speaker._id %></td>
+                    <td><%= speaker.UserName %></td>
+                    <td><%= speaker.Age %></td>
+                    
+                    <td><a href="/speaker/edit/<%=speaker._id%>" class="btn btn-danger">Edit </a></td>
+                    <td> <a href="/speaker/delete/<%=speaker._id %>" class="btn btn-danger" >Delete</a></td>
+                    
+                   </tr>
+
+              <%  }) %>
+                    
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<%- include('../Partials/footer.ejs') -%>

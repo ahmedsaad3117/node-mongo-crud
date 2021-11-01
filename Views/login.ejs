@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width ,initial-scale=1" >
+        <title>Fantastic Events</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="CSS/font-awesome.css" rel="stylesheet">
+        <link href="CSS/login.css" rel="stylesheet">
+    </head>
+    <body>
+        <form action="/login" method="POST" >
+        <div class="container-fluid">
+           
+            <div class="row" >
+                <div class=" text-center loginForm">
+                    <p class="h1 text-danger">Fantastic Events</p>
+                  <form action="/login" method="POST" >
+                      <div class="input-group">
+                          <span class="input-group-prepend"><i class="input-group-text fa fa-user"></i></span>
+                          <input type="text" placeholder="User Name" name="UserName"  class="form-control" >
+                      </div>
+                      <div class="input-group">
+                          <span class="input-group-prepend"><i class="input-group-text fa fa-lock"></i></span>
+                          <input type="password" placeholder="User Password" name="UserPassword" class="form-control" >
+                        
+                      </div> 
+                      <h3><%=errormessage%></h3>
+                      <input type="submit" value="LOG IN " class="btn btn-danger "> 
+
+                  </form>
+                </div>
+               
+              </div>
+           
+        </div>
+    </form>
+        <script src="jquery.min.js"></script>
+        <script src="JS/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

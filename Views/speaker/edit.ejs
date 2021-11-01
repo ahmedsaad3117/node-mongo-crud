@@ -1,0 +1,26 @@
+<%- include("../Partials/header") -%>
+<form action="/speaker/edit/<%=speaker._id%>" method="post">
+    <div class="container-fluid speaker">
+        <div class="overlay">
+            <div class="container speakerForm text-center">
+                <p class="h1">Edit Speaker Info</p>
+                
+                <div class="input-group">
+                    <span class="input-group-prepend"><i class="input-group-text fa fa-user"></i></span>
+                    <input type="text" class ="form-control"  value="<%=speaker.UserName%>" name="username">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-prepend"><i class="input-group-text fa fa-lock"></i></span>
+                    <input type="text" class ="form-control"  value="<%=speaker.Password%>" name="Password">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-prepend"><i class="input-group-text fa fa-child"></i></span>
+                    <input type="number" class ="form-control"  value="<%=speaker.Age%>" name="age">
+                </div>
+                <button class="btn text-light w-25 Update">Update</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="/JS/editSpeaker.js"></script>
+<%- include("../Partials/footer") -%>

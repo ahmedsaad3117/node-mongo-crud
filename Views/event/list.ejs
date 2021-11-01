@@ -1,0 +1,35 @@
+<%- include("../Partials/header") -%>
+<div class="container-fluid bg-dark">
+    <div class="container">
+        <table class="table table-dark m-0">
+            <thead >
+                <tr>
+                    <td>title</td>
+                    <td>main speaker id</td>
+                    <td>othere speaker id</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+              <% events.forEach((event)=>{ %>
+
+             
+                 <tr>
+                    <td><%= event.title %></td>
+                    <td><%= event.mainSpeaker %></td>
+                    <td><%= event.otherSpeaker %></td>
+                    
+                    <td></td>
+                    
+                   </tr>
+
+              <%  }) %>
+                    
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<%- include('../Partials/footer.ejs') -%>

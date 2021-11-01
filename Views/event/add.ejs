@@ -1,0 +1,34 @@
+<%- include("../Partials/header.ejs") -%>
+<form action="/event/add" method="POST">
+    <div class="container-fluid speaker">
+        <div class="overlay">
+            <div class="container speakerForm text-center">
+                <p class="h1">Add new a event</p>
+                <div class="input-group">
+                    <span class="input-group-prepend"><i class="input-group-text fa fa-user"></i></span>
+                    <input type="text" class ="form-control" placeholder="title" name="title">
+                </div>
+                <div class="input-group">
+                    <select name="mainSpeaker" >
+                        <% speakers.forEach((speaker)=>{  %>
+
+                            <option value="<%= speaker.UserName%>" > <%= speaker.UserName %> </option>
+                            
+                            <% })%>
+                    </select>
+                    <select name="otherSpeaker" >
+                        <% speakers.forEach((speaker)=>{  %>
+
+                            <option value="<%= speaker.UserName%>" ></option>  > <%= speaker.UserName %> </option>
+                            <% })%>
+                    </select>
+                </div>
+                
+                
+                <button class="btn text-light w-25 Update">Add</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="/JS/addEvent.js"></script>
+<%- include("../Partials/footer.ejs") -%>
